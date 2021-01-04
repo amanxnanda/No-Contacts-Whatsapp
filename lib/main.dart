@@ -4,7 +4,7 @@ import 'package:url_encoder/url_encoder.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 const apiURL = 'https://api.whatsapp.com/send?phone=91';
-String message;
+String message='hello';
 String requestURL;
 String number;
 
@@ -29,6 +29,7 @@ class FrontPage extends StatefulWidget {
 }
 
 class _FrontPageState extends State<FrontPage> {
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -174,7 +175,7 @@ class _FrontPageState extends State<FrontPage> {
 _launchUrl(String messageFromButton) async {
   String url = '$apiURL$number&text=${urlEncode(text: messageFromButton)}';
   if (await canLaunch(url)) {
-    await launch(url);
+    await launch(url, forceSafariVC: false);
   } else {
     throw 'could not launch $url';
   }
