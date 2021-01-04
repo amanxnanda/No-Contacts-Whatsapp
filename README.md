@@ -1,6 +1,6 @@
-# no_contacts_whatsapp
+# No Contacts Whatsapp
 
-A new Flutter project.
+This app lets you send message on whatsapp whithout saving contact.
 
 ## Getting Started
 
